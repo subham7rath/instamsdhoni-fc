@@ -1,0 +1,79 @@
+<!-- File: common-header.html (This will be included in all pages manually or by repeating code) -->
+<header class="navbar">
+  <img src="images/logo.png" alt="Logo" class="logo" />
+  <h1 class="company-name">instamsdhoni-fc</h1>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="achievement.html">Achievement</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="https://instagram.com/instamsdhoni.fc" target="_blank">
+      <img src="images/insta-icon.png" alt="Instagram" class="icon"> instamsdhoni.fc
+    </a>
+    <div class="dropdown">
+      <span>More</span>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="collaborate.html">Collaborate</a>
+        <a href="privacy.html">T&C / Privacy</a>
+      </div>
+    </div>
+    <form class="search-form" action="search.html" method="get">
+      <input type="text" name="q" placeholder="Search anything...">
+      <button type="submit">🔍</button>
+    </form>
+  </nav>
+</header>
+
+<!-- File: search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search | instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Include the header here -->
+  <main class="container">
+    <h2>Search Results</h2>
+    <div id="search-results"></div>
+  </main>
+  <footer>
+    <p>© 2025 instamsdhoni-fc. All rights reserved.</p>
+  </footer>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q')?.toLowerCase() || "";
+
+    const data = [
+      { type: 'Image', title: 'Dhoni 2011 Victory', path: 'gallery.html' },
+      { type: 'News', title: 'Dhoni joins CSK camp', path: 'news.html' },
+      { type: 'Account', title: 'Create Account', path: 'account.html' },
+      { type: 'Login', title: 'Login Page', path: 'login.html' },
+    ];
+
+    const results = data.filter(item => item.title.toLowerCase().includes(query));
+    const container = document.getElementById("search-results");
+
+    if (results.length === 0) {
+      container.innerHTML = '<p>No data found.</p>';
+    } else {
+      container.innerHTML = '<ul>' + results.map(item => `<li><a href="${item.path}">${item.title} (${item.type})</a></li>`).join('') + '</ul>';
+    }
+  </script>
+</body>
+</html>
+
+<!-- Ensure account.html and login.html check login before review/collaborate access -->
+<!-- In reviews.html and collaborate.html -->
+<script>
+  // Simple redirect if not logged in (replace with actual logic)
+  const loggedIn = localStorage.getItem("user_logged_in");
+  if (!loggedIn) {
+    alert("You must be logged in to access this page.");
+    window.location.href = "login.html";
+  }
+</script>
