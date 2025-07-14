@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>instamsdhoni-fc | Account</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/images/logo.png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header Navigation Bar -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="logo" class="logo" />
+    <h1 class="company-name">instamsdhoni-fc</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="achievement.html">Achievement</a>
+      <a href="profile.html">Profile</a>
+      <a href="about.html">About</a>
+      <a href="https://instagram.com/instamsdhoni.fc" target="_blank">
+        <i class="fab fa-instagram"></i> instamsdhoni.fc
+      </a>
+      <div class="dropdown">
+        <span>More</span>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="reviews.html" onclick="return checkAuth('reviews.html')">Reviews</a>
+          <a href="collaborate.html" onclick="return checkAuth('collaborate.html')">Collaborate</a>
+          <a href="privacy.html">T&C / Privacy</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Account Creation Section -->
+  <main class="account-container">
+    <h2>Create Your Account</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" name="fname" pattern="[A-Za-z]+" required />
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="lname" pattern="[A-Za-z]+" required />
+      </div>
+      <div class="form-group">
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" id="dob" required />
+      </div>
+      <div class="form-group">
+        <label>Email ID:</label>
+        <input type="email" name="email" id="email" required />
+        <button type="button" onclick="sendEmailOTP()">Verify Email</button>
+        <input type="text" id="emailOtp" placeholder="Enter OTP" />
+      </div>
+      <div class="form-group">
+        <label>City:</label>
+        <input type="text" name="city" required />
+      </div>
+      <div class="form-group">
+        <label>Phone:</label>
+        <select name="countryCode" required>
+          <option value="91">🇮🇳 +91</option>
+          <option value="1">🇺🇸 +1</option>
+          <option value="44">🇬🇧 +44</option>
+          <!-- add more as needed -->
+        </select>
+        <input type="text" id="phone" maxlength="10" pattern="\d{10}" required />
+        <button type="button" onclick="sendPhoneOTP()">Verify Phone</button>
+        <input type="text" id="phoneOtp" placeholder="Enter OTP" />
+      </div>
+      <div class="form-group">
+        <label>Signup using:</label>
+        <button type="button">Google</button>
+        <button type="button">Apple ID</button>
+      </div>
+      <div class="form-group">
+        <button type="submit">Create Account</button>
+      </div>
+      <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </form>
+
+    <h3>Already have an account? <a href="login.html">Login</a></h3>
+  </main>
+
+  <footer>
+    <p>© 2025 instamsdhoni-fc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Redirect with login check
+    function checkAuth(page) {
+      const isLoggedIn = localStorage.getItem('loggedIn');
+      if (!isLoggedIn) {
+        alert('Please login to continue');
+        window.location.href = 'account.html';
+        return false;
+      }
+      return true;
+    }
+
+    // Age verification logic
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      const dob = new Date(document.getElementById('dob').value);
+      const today = new Date();
+      const age = today.getFullYear() - dob.getFullYear();
+      if (age < 18) {
+        alert('You must be at least 18 years old.');
+        e.preventDefault();
+      }
+    });
+
+    function sendEmailOTP() {
+      alert("OTP sent to your email (simulation)");
+    }
+
+    function sendPhoneOTP() {
+      alert("OTP sent to your phone (simulation)");
+    }
+  </script>
+</body>
+</html>
