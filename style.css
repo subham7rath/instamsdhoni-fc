@@ -1,67 +1,100 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
+
 header {
-    background: linear-gradient(to right, #3b0a45, #9d0b3e);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: #111;
+}
+
 .tagline {
-    font-size: 1em;
-    color: #ddd;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #777;
 }
-button {
-    padding: 10px 20px;
-    background: gold;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+
+.nav-links {
+  margin-top: 20px;
 }
-.about, .timeline, .achievements {
-    padding: 20px;
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 600;
 }
-.stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
-.stats div {
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    text-align: center;
+
+section {
+  padding: 30px 20px;
 }
-.timeline .event {
-    background: white;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: 60%;
+
+.timeline, .achievements {
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
-.timeline .left { text-align: left; }
-.timeline .right { text-align: right; }
+
+.timeline h2,
+.achievements h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.event {
+  padding: 10px 20px;
+  border-left: 3px solid #0077cc;
+  margin: 10px 0;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.event.right {
+  border-left: none;
+  border-right: 3px solid #0077cc;
+  text-align: right;
+}
+
 .cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
+
 .cards div {
-    background: white;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    flex: 1 1 200px;
-    text-align: center;
+  padding: 15px 20px;
+  background: #e0f0ff;
+  border-radius: 6px;
+  min-width: 180px;
+  text-align: center;
+  font-weight: bold;
 }
+
 footer {
-    background: linear-gradient(to right, #3b0a45, #9d0b3e);
-    color: white;
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #999;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
 }
