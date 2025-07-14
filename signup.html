@@ -67,13 +67,105 @@
 </body>
 </html>
 
-<!-- Ensure account.html and login.html check login before review/collaborate access -->
-<!-- In reviews.html and collaborate.html -->
-<script>
-  // Simple redirect if not logged in (replace with actual logic)
-  const loggedIn = localStorage.getItem("user_logged_in");
-  if (!loggedIn) {
-    alert("You must be logged in to access this page.");
-    window.location.href = "login.html";
-  }
-</script>
+<!-- File: account.html (Landing for account options) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account | instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Include header -->
+  <main class="container">
+    <h2>Welcome to Account Center</h2>
+    <p><a href="signup.html">Create a New Account</a></p>
+    <p><a href="login.html">Login</a></p>
+    <p><a href="forgot-password.html">Forgot Password?</a></p>
+  </main>
+</body>
+</html>
+
+<!-- File: signup.html (Account creation form with validation) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <input type="text" name="firstName" placeholder="First Name" required pattern="[A-Za-z]+">
+      <input type="text" name="lastName" placeholder="Last Name" required pattern="[A-Za-z]+">
+      <input type="date" name="dob" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <select name="countryCode">
+        <option value="+91">India (+91)</option>
+        <option value="+1">USA (+1)</option>
+        <!-- more options -->
+      </select>
+      <input type="text" name="phone" placeholder="10-digit Phone" pattern="\d{10}" required>
+      <button type="button" onclick="sendOTP()">Verify Phone</button>
+      <input type="text" name="otp" placeholder="Enter OTP">
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Or sign up using:</p>
+    <button>Google</button> <button>Apple ID</button>
+  </main>
+  <script>
+    document.getElementById('signupForm').onsubmit = function(e) {
+      const dob = new Date(this.dob.value);
+      const age = new Date().getFullYear() - dob.getFullYear();
+      if (age < 18) {
+        alert("You must be 18+ to register.");
+        e.preventDefault();
+      }
+    };
+    function sendOTP() {
+      alert("OTP sent (simulated).");
+    }
+  </script>
+</body>
+</html>
+
+<!-- File: login.html (Login page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p><a href="forgot-password.html">Forgot Password?</a></p>
+  </main>
+</body>
+</html>
+
+<!-- File: verify.html (OTP verification page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify Email/Phone | instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Verify Your Account</h2>
+    <p>We sent an OTP to your phone/email.</p>
+    <input type="text" placeholder="Enter OTP">
+    <button>Verify</button>
+  </main>
+</body>
+</html>
