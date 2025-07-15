@@ -2,119 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>instamsdhoni-fc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>instamsdhoni-fc - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #f9f9f9;
-      padding: 10px 20px;
-      border-bottom: 1px solid #ddd;
-    }
-    header .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header .top-bar img {
-      height: 40px;
-    }
-    header .top-bar .company-name {
-      font-size: 24px;
-      font-weight: bold;
-      flex-grow: 1;
-      text-align: center;
-      margin-left: -40px;
-    }
-    header .tagline {
-      text-align: center;
-      margin-top: 5px;
-      color: gray;
-    }
-    nav {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 5px;
-      z-index: 1;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    form {
-      text-align: center;
-      margin-top: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #f1f1f1;
-      border-top: 1px solid #ddd;
-      margin-top: 30px;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    nav { background: #1c1c1c; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    nav a { color: white; text-decoration: none; margin: 0 10px; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content { display: none; position: absolute; background-color: #1c1c1c; min-width: 160px; z-index: 1; }
+    .dropdown-content a { display: block; padding: 8px 12px; }
+    .dropdown:hover .dropdown-content { display: block; }
+    .container { padding: 20px; }
+    footer { background: #1c1c1c; color: white; text-align: center; padding: 10px; }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="top-bar">
-    <img src="images/logo.png" alt="Logo">
-    <div class="company-name">instamsdhoni-fc</div>
-  </div>
-  <div class="tagline">Since 7/7/1981 — A Journey from Ranchi to Revered</div>
-  
   <nav>
-    <a href="index.html">Home</a>
-    <a href="achievement.html">Achievement</a>
-    <a href="profile.html">Profile</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <a href="#">More ▼</a>
-      <div class="dropdown-content">
-        <a href="gallery.html">Gallery</a><br>
-        <a href="news.html">News</a><br>
-        <a href="reviews.html">Reviews</a><br>
-        <a href="privacy.html">T&amp;C / Privacy</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="achievement.html">Achievement</a>
+      <a href="profile.html">Profile</a>
+      <a href="https://www.instagram.com/instamsdhoni.fc" target="_blank">instamsdhoni.fc</a>
+      <a href="about.html">About</a>
+      <div class="dropdown">
+        <a href="#">More <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </div>
     </div>
-    <a href="https://instagram.com/instamsdhoni.fc" target="_blank">
-      <img src="images/ig.png" alt="Instagram" style="height:16px; vertical-align:middle;"> instamsdhoni.fc
-    </a>
   </nav>
-
-  <form action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search..." required>
-    <button type="submit">Search</button>
-  </form>
-</header>
-
-<main style="padding: 20px;">
-  <h2>Welcome to instamsdhoni-fc</h2>
-  <p>This is the landing page for all Dhoni fans. Explore achievements, gallery, news, and more dedicated to our Captain Cool.</p>
-</main>
-
-<footer>
-  © 2025 instamsdhoni-fc. All rights reserved.
-</footer>
-
+  <div class="container">
+    <h1>Welcome to instamsdhoni-fc</h1>
+    <h3 style="color: #555; font-style: italic; margin-top: -10px;">Since 7/7/1981 — A Journey from Ranchi to Revered.</h3>
+    <p>A fan site dedicated to MS Dhoni — from the beginning to now!</p>
+  </div>
+  <footer>&copy; 2025 instamsdhoni-fc. All rights reserved.</footer>
 </body>
 </html>
