@@ -1,38 +1,30 @@
 <!DOCTYPE html><html><head><title>instamsdhoni-fc</title><meta name='viewport' content='width=device-width, initial-scale=1.0'></head><body>
 <header>
-  <div style="display:flex; align-items:center; justify-content:space-between; background:#f9f9f9; padding:10px 20px; border-bottom:1px solid #ddd;">
-    <div style="display:flex; align-items:center;">
+  <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f9f9f9; padding:10px 20px; border-bottom:1px solid #ddd;">
+    <div style="display:flex; align-items:center; justify-content:center;">
       <img src="images/logo.png" alt="Logo" style="height:40px; margin-right:10px;">
-      <span style="font-size:20px; font-weight:bold;">instamsdhoni-fc</span>
+      <span style="font-size:24px; font-weight:bold;">instamsdhoni-fc</span>
     </div>
-    <nav>
+    <div style='text-align:center; font-size:14px; color:gray;'>Since 7/7/1981 — A Journey from Ranchi to Revered</div>
+    <nav style="margin-top:10px;">
       <a href="index.html">Home</a> |
       <a href="achievement.html">Achievement</a> |
       <a href="profile.html">Profile</a> |
-      <a href="https://instagram.com/instamsdhoni.fc" target="_blank">📸 instamsdhoni.fc</a> |
       <a href="about.html">About</a> |
-      <div style="display:inline-block; position:relative;">
-        <span style="cursor:pointer;">More ▼</span>
-        <div style="position:absolute; display:none; background:white; border:1px solid #ccc; padding:5px;" class="dropdown">
-          <a href="gallery.html">Gallery</a><br>
-          <a href="news.html">News</a><br>
-          <a href="reviews.html">Reviews</a><br>
-          <a href="privacy.html">T&amp;C / Privacy</a>
-        </div>
-      </div>
+      <a href="gallery.html">Gallery</a> |
+      <a href="news.html">News</a> |
+      <a href="reviews.html">Reviews</a> |
+      <a href="privacy.html">T&amp;C / Privacy</a> |
+      <a href="https://instagram.com/instamsdhoni.fc" target="_blank">
+        <img src="images/ig.png" alt="Instagram" style="height:16px; vertical-align:middle;"> instamsdhoni.fc
+      </a>
     </nav>
-    <form action="search.html" method="get">
+    <form action="search.html" method="get" style="margin-top:10px;">
       <input type="text" name="q" placeholder="Search..." required>
       <button type="submit">Search</button>
     </form>
   </div>
 </header>
-<script>
-document.querySelector('nav div span').addEventListener('click', () => {
-  const dropdown = document.querySelector('.dropdown');
-  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-});
-</script>
 <main style='padding:20px;'><h2>Welcome to the MS Dhoni Fan Page</h2></main>
 <footer style="background:#f1f1f1; text-align:center; padding:10px; position:fixed; bottom:0; width:100%;">
   <p>&copy; 2025 instamsdhoni-fc. All rights reserved.</p>
