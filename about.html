@@ -1,33 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - InstaMSDhoni.FC</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <img src="images/logo.png" alt="MS Dhoni Logo" class="logo"/>
-    <h1>InstaMSDhoni.FC</h1>
+<!DOCTYPE html><html><head><title>instamsdhoni-fc</title><meta name='viewport' content='width=device-width, initial-scale=1.0'></head><body>
+<header>
+  <div style="display:flex; align-items:center; justify-content:space-between; background:#f9f9f9; padding:10px 20px; border-bottom:1px solid #ddd;">
+    <div style="display:flex; align-items:center;">
+      <img src="images/logo.png" alt="Logo" style="height:40px; margin-right:10px;">
+      <span style="font-size:20px; font-weight:bold;">instamsdhoni-fc</span>
+    </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a> |
+      <a href="achievement.html">Achievement</a> |
+      <a href="profile.html">Profile</a> |
+      <a href="https://instagram.com/instamsdhoni.fc" target="_blank">📸 instamsdhoni.fc</a> |
+      <a href="about.html">About</a> |
+      <div style="display:inline-block; position:relative;">
+        <span style="cursor:pointer;">More ▼</span>
+        <div style="position:absolute; display:none; background:white; border:1px solid #ccc; padding:5px;" class="dropdown">
+          <a href="gallery.html">Gallery</a><br>
+          <a href="news.html">News</a><br>
+          <a href="reviews.html">Reviews</a><br>
+          <a href="privacy.html">T&amp;C / Privacy</a>
+        </div>
+      </div>
     </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>About This Page</h2>
-      <p>This page is dedicated to the one and only MS Dhoni. We bring you the latest updates, unseen photos, videos, and everything about Thala!</p>
-
-      <h2>About Me</h2>
-      <p>I am a professional IT employee who is passionate about MS Dhoni like you. I became an MSDian in 2005. I don’t remember the exact match, but I remember seeing a long-haired guy smashing big shots—that was the moment!</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 InstaMSDhoni.FC</p>
-  </footer>
-</body>
-</html>
+    <form action="search.html" method="get">
+      <input type="text" name="q" placeholder="Search..." required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</header>
+<script>
+document.querySelector('nav div span').addEventListener('click', () => {
+  const dropdown = document.querySelector('.dropdown');
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+<main style='padding:20px;'><p>This fan page is dedicated to MS Dhoni. Created and managed by a passionate fan.</p></main>
+<footer style="background:#f1f1f1; text-align:center; padding:10px; position:fixed; bottom:0; width:100%;">
+  <p>&copy; 2025 instamsdhoni-fc. All rights reserved.</p>
+</footer>
+</body></html>
