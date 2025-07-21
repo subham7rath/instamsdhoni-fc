@@ -1,45 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>instamsdhoni-fc - Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    nav { background: #1c1c1c; color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
-    nav a { color: white; text-decoration: none; margin: 0 10px; }
-    .dropdown { position: relative; display: inline-block; }
-    .dropdown-content { display: none; position: absolute; background-color: #1c1c1c; min-width: 160px; z-index: 1; }
-    .dropdown-content a { display: block; padding: 8px 12px; }
-    .dropdown:hover .dropdown-content { display: block; }
-    .container { padding: 20px; }
-    footer { background: #1c1c1c; color: white; text-align: center; padding: 10px; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>instamsdhoni-fc</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <div class="center-heading">
+      <h1>instamsdhoni-fc</h1>
+      <div class="tagline">Since 7/7/1981 — A Journey from Ranchi to Revered.</div>
+    </div>
+    <input type="text" placeholder="Search...">
+  </header>
   <nav>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="achievement.html">Achievement</a>
-      <a href="profile.html">Profile</a>
-      <a href="https://www.instagram.com/instamsdhoni.fc" target="_blank">instamsdhoni.fc</a>
-      <a href="about.html">About</a>
-      <div class="dropdown">
-        <a href="#">More <i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="gallery.html">Gallery</a>
-          <a href="news.html">News</a>
-          <a href="privacy.html">Privacy Policy</a>
-        </div>
+    <a href="index.html">home</a>
+    <a href="career.html">career timeline</a>
+    <a href="stats.html">stats & records</a>
+    <a href="awards.html">achievements & awards</a>
+    <div class="dropdown">
+      <a href="#">more</a>
+      <div class="dropdown-content">
+        <a href="about.html">about</a>
+        <a href="news.html">news & media</a>
+        <a href="gallery.html">photo & video galleries</a>
+        <a href="privacy.html">privacy policy</a>
       </div>
     </div>
   </nav>
-  <div class="container">
-    <h1>Welcome to instamsdhoni-fc</h1>
-    <h3 style="color: #555; font-style: italic; margin-top: -10px;">Since 7/7/1981 — A Journey from Ranchi to Revered.</h3>
-    <p>A fan site dedicated to MS Dhoni — from the beginning to now!</p>
-  </div>
-  <footer>&copy; 2025 instamsdhoni-fc. All rights reserved.</footer>
+<div class='live'>LIVE: India vs ... [Live Score Here]</div>
+  <footer>
+    <p>📧 <a href="https://instagram.com/instamsdhoni.fc" target="_blank">Contact (Instagram)</a></p>
+    <p>📃 Privacy Policy / Disclaimer - © 2025 instamsdhoni-fc. All rights reserved.</p>
+  </footer>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="top-button">🔄 Back to Top</button>
 </body>
 </html>
