@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instamsdhoni-fc - Gallery</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <img src="images/logo.svg" alt="instamsdhoni-fc logo">
+    </div>
+    <div class="company-info">
+      <h1>instamsdhoni-fc</h1>
+      <p class="tagline">Since 7/7/1981 — A Journey from Ranchi to Revered.</p>
+    </div>
+    <div class="search-area">
+      <form id="headerSearchForm" role="search">
+        <label for="headerSearchInput" class="visually-hidden">Search this site</label>
+        <input type="text" id="headerSearchInput" placeholder="Search..." class="search-bar">
+      </form>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">
+        <img src="images/instagram-icon.svg" alt="" class="ig-icon">instamsdhoni.fc</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <span class="dropbtn" tabindex="0" role="button" aria-haspopup="true">More <span class="dropdown-arrow">&#9662;</span></span>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="privacy.html">T&amp;C / Privacy Policy</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="gallery-full-section">
+    <h2>Photo & Video Gallery</h2>
+    <p>This is where your personal collection lives — the 65,000+ photos and videos you've gathered over the years.</p>
+    <p class="form-note"><strong>How to add real photos/videos:</strong> upload image files into an <code>images/gallery/</code> folder in your GitHub repo, then add an <code>&lt;img&gt;</code> tag for each one below (or tell me the file names and I'll wire them in for you). Since there's no backend, there's no upload button on the live site itself — new media gets added by editing this page's code and pushing to GitHub, the same way you'll update everything else.</p>
+
+    <div class="gallery-placeholder-grid">
+      <div class="gallery-placeholder-item"><img src="images/gallery_placeholder_1.jpg" alt="Gallery placeholder 1"></div>
+      <div class="gallery-placeholder-item"><img src="images/gallery_placeholder_2.jpg" alt="Gallery placeholder 2"></div>
+      <div class="gallery-placeholder-item"><img src="images/gallery_placeholder_3.jpg" alt="Gallery placeholder 3"></div>
+      <div class="gallery-placeholder-item"><img src="images/gallery_placeholder_4.jpg" alt="Gallery placeholder 4"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>📧 Contact: <a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">instamsdhoni.fc (Instagram)</a></p>
+    <p>📃 <a href="privacy.html">Privacy Policy / T&amp;C</a> &nbsp;|&nbsp; &copy; 2025 instamsdhoni-fc. All rights reserved.</p>
+  </div>
+</footer>
+<button id="backToTopBtn" title="Go to top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

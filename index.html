@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instamsdhoni-fc - Home</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <img src="images/logo.svg" alt="instamsdhoni-fc logo">
+    </div>
+    <div class="company-info">
+      <h1>instamsdhoni-fc</h1>
+      <p class="tagline">Since 7/7/1981 — A Journey from Ranchi to Revered.</p>
+    </div>
+    <div class="search-area">
+      <form id="headerSearchForm" role="search">
+        <label for="headerSearchInput" class="visually-hidden">Search this site</label>
+        <input type="text" id="headerSearchInput" placeholder="Search..." class="search-bar">
+      </form>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">
+        <img src="images/instagram-icon.svg" alt="" class="ig-icon">instamsdhoni.fc</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <span class="dropbtn" tabindex="0" role="button" aria-haspopup="true">More <span class="dropdown-arrow">&#9662;</span></span>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="privacy.html">T&amp;C / Privacy Policy</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="live-section">
+    <h2 class="live-heading">● LIVE</h2>
+    <div class="live-scorecard-placeholder">
+      <p>Live score for India's matches (international, IPL, WPL, Ranji, domestic) will appear here.</p>
+      <p class="form-note">This needs a live cricket data source (e.g. an API from CricAPI or a similar provider) plugged in — see the note at the bottom of this page for what's needed to switch this from an example to real live data.</p>
+      <div class="score-example">
+        <h3>Example: India vs Australia (T20I)</h3>
+        <p>India: 180/4 (18.2 ov)</p>
+        <p>Australia: 178/6 (20 ov)</p>
+        <p>India won by 6 wickets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Gallery — Recent Uploads</h2>
+    <div class="gallery-images">
+      <div class="gallery-item">
+        <img src="images/recent_upload_1.jpg" alt="MS Dhoni recent upload 1">
+        <p>Recent Upload 1</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/recent_upload_2.jpg" alt="MS Dhoni recent upload 2">
+        <p>Recent Upload 2</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/recent_upload_3.jpg" alt="MS Dhoni recent upload 3">
+        <p>Recent Upload 3</p>
+      </div>
+    </div>
+    <p class="form-note">These 3 images are placeholders — upload your own photos to the <code>images/</code> folder with these exact file names (or update the paths) and they'll show here automatically. See <a href="gallery.html">Gallery</a> for the full collection.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>📧 Contact: <a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">instamsdhoni.fc (Instagram)</a></p>
+    <p>📃 <a href="privacy.html">Privacy Policy / T&amp;C</a> &nbsp;|&nbsp; &copy; 2025 instamsdhoni-fc. All rights reserved.</p>
+  </div>
+</footer>
+<button id="backToTopBtn" title="Go to top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instamsdhoni-fc - Search</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="logo-area">
+      <img src="images/logo.svg" alt="instamsdhoni-fc logo">
+    </div>
+    <div class="company-info">
+      <h1>instamsdhoni-fc</h1>
+      <p class="tagline">Since 7/7/1981 — A Journey from Ranchi to Revered.</p>
+    </div>
+    <div class="search-area">
+      <form id="headerSearchForm" role="search">
+        <label for="headerSearchInput" class="visually-hidden">Search this site</label>
+        <input type="text" id="headerSearchInput" placeholder="Search..." class="search-bar">
+      </form>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">
+        <img src="images/instagram-icon.svg" alt="" class="ig-icon">instamsdhoni.fc</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <span class="dropbtn" tabindex="0" role="button" aria-haspopup="true">More <span class="dropdown-arrow">&#9662;</span></span>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="privacy.html">T&amp;C / Privacy Policy</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="search-section">
+    <h2>Search Results</h2>
+    <p class="form-note">This searches the pages on this site only (it can't search the whole internet). If nothing matches, you'll see "No data found."</p>
+    <div id="searchResults"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>📧 Contact: <a href="https://www.instagram.com/instamsdhoni.fc/" target="_blank" rel="noopener">instamsdhoni.fc (Instagram)</a></p>
+    <p>📃 <a href="privacy.html">Privacy Policy / T&amp;C</a> &nbsp;|&nbsp; &copy; 2025 instamsdhoni-fc. All rights reserved.</p>
+  </div>
+</footer>
+<button id="backToTopBtn" title="Go to top">↑</button>
+
+<script src="js/search-index.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var q = (params.get('q') || '').trim().toLowerCase();
+    var resultsEl = document.getElementById('searchResults');
+
+    if (!q) {
+      resultsEl.innerHTML = '<p class="no-results">Type something into the search bar above to get started.</p>';
+      return;
+    }
+
+    var matches = SEARCH_INDEX.filter(function (item) {
+      return item.title.toLowerCase().includes(q) ||
+             item.keywords.toLowerCase().includes(q) ||
+             item.snippet.toLowerCase().includes(q);
+    });
+
+    if (matches.length === 0) {
+      resultsEl.innerHTML = '<p class="no-results">No data found for "' + q.replace(/</g, '&lt;') + '".</p>';
+    } else {
+      resultsEl.innerHTML = matches.map(function (item) {
+        return '<div class="search-result-item"><a href="' + item.url + '"><h3 style="margin:0">' + item.title + '</h3></a><p>' + item.snippet + '</p></div>';
+      }).join('');
+    }
+  })();
+</script>
+</body>
+</html>
